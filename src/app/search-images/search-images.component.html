@@ -1,0 +1,33 @@
+<div class="container">
+  <h1 class="text-center">Flickr</h1>
+  <div class="form-group">
+    <input type="search" class="form-control" (keyup)="search($event)" placeholder="Search images">
+  </div>
+
+  <!--<div class="row">
+
+
+  </div>-->
+  <!--<mat-grid-list cols="3" rowHeight="3:1">
+    <mat-grid-tile *ngFor="let image of images" >
+      <div data-href="{{image.url}}.jpg" class="col-3">
+        <img src="{{image.url}}_m.jpg" title="{{image.title}}">
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>-->
+
+  <div>
+    <div class="list" cols="3" rowHeight="2:1" >
+      <div class="tile" *ngFor='let image of images' (click)="showInfo(image)">
+        <img src="{{image.url}}_m.jpg" title="{{image.title}}" >
+      </div>
+    </div>
+  </div>
+  <div
+    class="search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()">
+  </div>
+</div>

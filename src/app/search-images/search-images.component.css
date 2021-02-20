@@ -1,0 +1,10 @@
+img {
+  object-fit: cover;
+
+  height: 25vh;
+}
+.lis{ width: 100%}
+.tile{
+  width: 33%;
+  background: antiquewhite;
+}
